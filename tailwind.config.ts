@@ -53,9 +53,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				// Couleurs personnalisées pour l'app
-				navy: {
-					DEFAULT: 'hsl(var(--navy-deep))',
-					light: 'hsl(var(--navy-light))'
+				blue: {
+					DEFAULT: 'hsl(var(--blue-primary))',
+					light: 'hsl(var(--blue-light))'
 				},
 				orange: {
 					DEFAULT: 'hsl(var(--orange-primary))',
