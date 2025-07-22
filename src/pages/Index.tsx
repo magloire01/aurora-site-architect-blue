@@ -4,6 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Search, Sparkles, Zap, Globe, Palette } from "lucide-react";
+import { Link } from "react-router-dom";
+import ThemeToggle from "@/components/ThemeToggle";
+import Footer from "@/components/Footer";
 
 const templates = [
   {
@@ -93,6 +96,7 @@ const Index = () => {
             <span className="text-xl font-bold text-foreground">WebCreator</span>
           </div>
           <div className="flex items-center gap-4">
+            <ThemeToggle />
             <Button variant="ghost">Connexion</Button>
             <Button>S'inscrire</Button>
           </div>
@@ -201,10 +205,12 @@ const Index = () => {
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button variant="secondary" className="bg-white/90 hover:bg-white">
-                      <Palette className="w-4 h-4 mr-2" />
-                      Personnaliser
-                    </Button>
+                    <Link to={`/customize/${template.id}`}>
+                      <Button variant="secondary" className="bg-white/90 hover:bg-white">
+                        <Palette className="w-4 h-4 mr-2" />
+                        Personnaliser
+                      </Button>
+                    </Link>
                   </div>
 
                   {/* Badges */}
@@ -239,6 +245,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };
