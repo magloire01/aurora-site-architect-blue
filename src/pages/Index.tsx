@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Search, Sparkles, Zap, Globe, Palette } from "lucide-react";
+import { Search, Sparkles, Zap, Globe, Palette } from "lucide-react"; {/* importation des icones depuis lucide-react */}
 import { Link } from "react-router-dom";
 import ThemeToggle from "@/components/ThemeToggle";
+import frameBein_Acceuil from "@/assets/FrameBein_Acceuil.jpg";
 import Footer from "@/components/Footer";
-
 const templates = [
   {
     id: 1,
@@ -93,7 +93,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Globe className="w-8 h-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">WebCreator</span>
+            <span className="text-xl font-bold text-foreground">FrameBein</span>
           </div>
           <div className="flex items-center gap-4">
             <ThemeToggle />
@@ -103,9 +103,21 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Vue de l'acceuil */}
+      {/* 
+        Je retiens : la propriété "backgroundImage" attend une valeur de type string au format CSS, par exemple : backgroundImage: 'url("/chemin/vers/image.jpg")'.
+        Si "frameBein_Acceuil" est une importation d'image (ex: import frameBein_Acceuil from "..."), il faut l'utiliser ainsi : backgroundImage: `url(${frameBein_Acceuil})`
+      */}
+      <section
+        className="py-20 px-4 relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${frameBein_Acceuil})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-background/85 pointer-events-none"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4" />
             Créez votre site web en quelques secondes
@@ -114,14 +126,15 @@ const Index = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             Transformez votre
             <span className="bg-gradient-hero bg-clip-text text-transparent"> idée </span>
-            en site web
+            en 
+            <span className="bg-gradient-hero bg-clip-text text-transparent"> site web</span>
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Décrivez votre projet et notre IA créera un site web professionnel personnalisé pour vous.
           </p>
 
-          {/* AI Input */}
+          {/* Input de l'ia */}
           <div className="max-w-2xl mx-auto mb-4">
             <div className="flex gap-2">
               <Input

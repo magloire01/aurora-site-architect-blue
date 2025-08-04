@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <Globe className="w-8 h-8 text-primary" />
-              <span className="text-xl font-bold text-foreground">WebCreator</span>
+              <span className="text-xl font-bold text-foreground">FrameBein</span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               La plateforme IA pour créer des sites web professionnels en quelques minutes. 
@@ -48,7 +48,7 @@ const Footer = () => {
 
         <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 WebCreator. Tous droits réservés.
+            © 2025 FrameBein. Tous droits réservés.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
